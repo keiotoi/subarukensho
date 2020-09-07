@@ -3,21 +3,21 @@ const app = express()
 const port = process.env.PORT || 8085;
 const request = require('request');
 
-//var options = {
-//    url: 'https://localhost:5001/api/values',
-//    //url: 'https://google.com',
-//    method: 'GET'
-//}
+var options = {
+    url: 'https://localhost:5001/api/values',
+    //url: 'https://google.com',
+    method: 'GET'
+}
 
 app.get('/', (req, res) => {
 
-    //request(options, function (error, response, body) {
-    //    res.send(body)
-    //    console.log('test');
-    //})
+    request(options, function (error, response, body) {
+        res.send(body)
+        //console.log('test');
+    })
 
 
-    res.send('Hello world!')
+    //res.send('Hello world!')
 
 })
 
